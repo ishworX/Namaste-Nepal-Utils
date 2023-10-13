@@ -1,4 +1,4 @@
-const config = require("../config.js");
+const config = require("../myconfig.js");
 const { ActivityType } = require("discord.js")
 module.exports = async (client) => {
 

@@ -1,7 +1,7 @@
-const config = require("../config.js");
 const { EmbedBuilder, InteractionType, ModalBuilder, TextInputBuilder, TextInputStyle, ActionRowBuilder } = require('discord.js');
 const db = require("../mongoDB");
-const fs = require("fs")
+const fs = require("fs");
+const config = require("../myconfig.js");
 module.exports = async (client, interaction) => {
 
     try {
