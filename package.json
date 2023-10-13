@@ -29,6 +29,7 @@
     "ffmpeg-static": "^5.2.0",
     "install": "^0.13.0",
     "libsodium-wrappers": "^0.7.11",
+    "mongodb": "^6.1.0",
     "mongoose": "^6.11.6",
     "npm": "^10.2.0",
     "random-anime": "^1.0.6",

@@ -3,7 +3,7 @@ module.exports = {
     ownerID: ["1055655980521767023", "209329206729900032", ""],
     botInvite: "",
     supportServer: "1114625897245462530",
-    mongodbURL: "",
+    mongodbURL: "mongodb+srv://GrooveBot:20180116Npkt@cluster0.whgi711.mongodb.net/?retryWrites=true&w=majority",
     status: 'BOT is Oline',
     commandsDir: './commands',
     language: "en",
