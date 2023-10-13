@@ -5,7 +5,7 @@ const { SoundCloudPlugin } = require("@distube/soundcloud");
 const { DeezerPlugin } = require("@distube/deezer");
 const { YtDlpPlugin } = require("@distube/yt-dlp");
 const { printWatermark } = require('./util/pw');
-const config = require("./config.js");
+const config = require("./myconfig.js");
 const fs = require("fs");
 const path = require('path');
 

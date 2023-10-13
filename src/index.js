@@ -1,4 +1,4 @@
-const config = require('../config');
+const config = require('../myconfig');
 
 if(config.shardManager.shardStatus == true){
 
