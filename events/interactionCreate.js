@@ -67,7 +67,7 @@ module.exports = async (client, interaction) => {
                                             }
                                         }
                                         if (props && props.voiceChannel) {
-                                            if (!interaction?.member?.voice?.channelId) return interaction?.reply({ content: `🔴 Join Voice channel First!!`, ephemeral: true }).catch(e => { })
+                                            if (!interaction?.member?.voice?.channelId) return interaction?.reply({ content: `🔴 You need to be in a voice channel.`, ephemeral: true }).catch(e => { })
                                             const guild_me = interaction?.guild?.members?.cache?.get(client?.user?.id);
                                             if (guild_me?.voice?.channelId) {
                                                 if (guild_me?.voice?.channelId !== interaction?.member?.voice?.channelId) {

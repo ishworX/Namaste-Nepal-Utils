@@ -99,22 +99,11 @@ if (config.mongodbURL || process.env.MONGO) {
         useNewUrlParser: true,
         useUnifiedTopology: true,
     }).then(async () => {
-        console.log('\x1b[32m%s\x1b[0m', `|    🍔 Connected MongoDB!`)
+        console.log('\x1b[32m%s\x1b[0m', `|    ✅ Connected to MongoDB!`)
     }).catch((err) => {
-        console.log('\x1b[32m%s\x1b[0m', `|    🍔 Failed to connect MongoDB!`)
+        console.log('\x1b[32m%s\x1b[0m', `|    ❌ Failed to connect MongoDB!`)
     })
 } else {
-    console.log('\x1b[32m%s\x1b[0m', `|    🍔 Error MongoDB!`)
+    console.log('\x1b[32m%s\x1b[0m', `|    ❌ Error MongoDB!`)
 }
 
-
-const express = require("express");
-const myconfig = require("./myconfig.js");
-const app = express();
-const port = 3000;
-app.get('/', (req, res) => {
-    const imagePath = path.join(__dirname, 'index.html');
-    res.sendFile(imagePath);
-});
-app.listen(port, () => console.log('\x1b[36m%s\x1b[0m', `|    🔗 Listening to RTX : ${port}`));
-printWatermark();
