@@ -125,8 +125,8 @@ module.exports = {
                 }
 
                 const embed = new EmbedBuilder()
-                    .setColor('#3498db')
-                    .setColor('#FF0000')
+                    .setColor('#7645fe')
+                    .setColor('#7645fe')
                     .setDescription('**🎼 Getting the music for you!**');
 
                 await interaction.reply({ embeds: [embed] }).catch(e => { });
