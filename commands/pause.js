@@ -24,7 +24,7 @@ module.exports = {
                     iconURL: 'https://media.discordapp.net/attachments/1115193942724595804/1163898916723494993/pause-button-6075357-5012992.webp?ex=65414055&is=652ecb55&hm=6a2e3e590d571cd05b357469d56a74a71add139e6817f01f5026c6e0f04e948e&=&width=900&height=900',
                     url: 'https://discord.gg/nhj6yAqUdG'
                 })
-                .setDescription(success ? '**The music has been Paused. Run `</fast:972289487818334212>` to resume.**' : '❌ Command Error: Unable to pause song')
+                .setDescription(success ? '**The music has been Paused. Run </resume:1163903710343204935> to resume.**' : '❌ Command Error: Unable to pause song')
 
 
             return interaction.reply({ embeds: [embed] });
