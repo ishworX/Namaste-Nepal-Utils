@@ -12,7 +12,7 @@ module.exports = async (client, queue, song) => {
                     url: 'https://discord.gg/VZfat7Eerf'
                 })
                 .setDescription(`\n ‎ \n▶️ **Song Title  :** **${song?.name}**\n`)
-                .setColor('#FF0000')
+                .setColor('#7645fe')
                 .setFooter({ text: `\nMore info - Use /help command.`});
 
             queue?.textChannel?.send({ embeds: [embed] }).catch(e => { });
