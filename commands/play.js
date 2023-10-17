@@ -2,17 +2,17 @@ const { ApplicationCommandOptionType, EmbedBuilder } = require('discord.js');
 const db = require("../mongoDB");
 module.exports = {
     name: "play",
-    description: "Play a track.",
+    description: "Plays a song with the given name of URL.",
     permissions: "0x0000000000000800",
     options: [
         {
-            name: "normal",
-            description: "Open music from other platforms.",
+            name: "song",
+            description: "Plays a song with the given name of URL.",
             type: ApplicationCommandOptionType.Subcommand,
             options: [
                 {
                     name: "name",
-                    description: "Write your music name.",
+                    description: "Enter the song name or URL.",
                     type: ApplicationCommandOptionType.String,
                     required: true
                 }
@@ -20,12 +20,12 @@ module.exports = {
         },
         {
             name: "playlist",
-            description: "Write your playlist name.",
+            description: "Plays the songs with the URL.",
             type: ApplicationCommandOptionType.Subcommand,
             options: [
                 {
                     name: "name",
-                    description: "Write the name of the playlist you want to create.",
+                    description: "Enter the song name or URL.",
                     type: ApplicationCommandOptionType.String,
                     required: true
                 }
@@ -118,7 +118,7 @@ module.exports = {
                 }
             }
 
-            if (stp === "normal") {
+            if (stp === "song") {
                 const name = interaction.options.getString('name');
                 if (!name) {
                     return interaction.reply({ content: '▶️ Give Text or link', ephemeral: true }).catch(e => { });
@@ -127,7 +127,7 @@ module.exports = {
                 const embed = new EmbedBuilder()
                     .setColor('#3498db')
                     .setColor('#FF0000')
-                    .setDescription('**🎸 Get ready for a musical journey!**');
+                    .setDescription('**🎼 Getting the music for you!**');
 
                 await interaction.reply({ embeds: [embed] }).catch(e => { });
 
